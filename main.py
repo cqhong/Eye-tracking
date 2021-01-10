@@ -21,9 +21,9 @@ import time
 
 #语音转文字接口参数
 """ 你的 APPID AK SK """
-APP_ID = '23434237'
-API_KEY = 'tapPrEQx9QK47Q56OMSCbqT2'
-SECRET_KEY = 'NiS6ZrxYtVP3uYHOufMjgiPr6NFHI0rO'
+APP_ID = 'xxxxxxx'
+API_KEY = 'xxxxxxxx'
+SECRET_KEY = 'xxxxxxxxxxxxxxx'
 
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
 #图灵机器人接口参数
@@ -42,7 +42,7 @@ class TuringChatMode(object):
                         userid     必须          32           MAC地址或ID
         '''
         turing_url_data = dict(
-            key='01884059fcb405fa9f4b17cefb6d712c',
+            key='xxxxxxxxxxxxxx',
             question=text,
 
         )
@@ -216,8 +216,8 @@ def on_close(ws):
     print("")
 
 # 测试时候在此处正确填写相关信息即可运行
-wsParam = Ws_Param(APPID='5fed5e05', APISecret='1c713a090ddaf5aea2b58733e3b7dafc',
-                   APIKey='c9cffecb25cd383d030bb36a5140e87e',
+wsParam = Ws_Param(APPID='xxxxxxxxxx', APISecret='xxxxxxxxxxxx',
+                   APIKey='xxxxxxxxxxxx',
                    Text="我在听")
 
 # 收到websocket连接建立的处理
@@ -283,8 +283,8 @@ while(1):
     print(turing_data[0]['reply'])
     wsParam.Text="123456"
     reply=turing_data[0]['reply']
-    wsParam = Ws_Param(APPID='5fed5e05', APISecret='1c713a090ddaf5aea2b58733e3b7dafc',
-                       APIKey='c9cffecb25cd383d030bb36a5140e87e',
+    wsParam = Ws_Param(APPID='xxxxxxxxxxxxxx', APISecret='xxxxxxxxxxxxxxxxxxx',
+                       APIKey='xxxxxxxxxxxxxxxxxx',
                        Text=reply)
     get_reply_speech()
     play()
